@@ -3,3 +3,37 @@ HOST: http://localhost:9003
 
 # Schema Manager APIs
 
+# Group DataTable Schema
+This session groups the Data Table Schema related resources
+
+## Datatable Schema [/dataTableSchemas/{tableId}]
+
+### Retrieve Schema for one Datatable [GET]
+
++ Parameters
+    - tableId: 1 (string, required) - the unique identifier of a datatable
+
++ Response
+```js
+{
+    "dataTableId": 1,
+    "dataTableName": "controlTest",
+    "fieldDefinitions": [
+        {
+            "attributeFormat": "pretty",
+            "attributeType": "numeric",
+            "displayName": "The Main Table ID",
+            "fieldName": "id",
+            "position": 1
+        },
+        {
+            "attributeFormat": "json",
+            "attributeType": "character",
+            "displayName": "NaMe",
+            "fieldName": "alias",
+            "position": 2
+        }
+    ]
+}
+```
+
