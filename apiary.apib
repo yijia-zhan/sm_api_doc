@@ -3,36 +3,27 @@ HOST: http://localhost:9003
 
 # Schema Manager APIs
 
-# Group DataTable Schema
+## Table Schema [/dataTableSchemas/{tableId}]
 
-THis is a group for Schema related resources
+### Retrieve schema of a datatable [GET]
++ Parameters
+    - tableId: 1 (number, required) - The identifier of the Databable
 
-## DataTable Schema [/dataTableSchemas/{tableId}]
++ Attributes (Table)
 
-### List the schema of one table [GET]
+## Data Structures
 
-+ Response 200 (application/json)
+### Table (object)
++ dataTableId: 101 (number, required) - the id of a datatable
++ dataTableName: control test (string) - the name of a datatable
++ fieldDefinitions: (array[Schema]) - list of field definitions
 
-{
-    "dataTableId": 1,
-    "dataTableName": "controlTest",
-    "fieldDefinitions": [
-        {
-            "attributeFormat": "pretty",
-            "attributeType": "numeric",
-            "displayName": "The Main Table ID",
-            "fieldName": "id",
-            "position": 1
-        },
-        {
-            "attributeFormat": "json",
-            "attributeType": "character",
-            "displayName": "NaMe",
-            "fieldName": "alias",
-            "position": 2
-        }
-    ]
-}
+### Schema (object)
++ attributeFormat: pretty (string) - the format of an attribute
++ attributeType: numeric (string) - the attribute type
++ displayName: `The Main Table ID` (string) - the display name of the field
++ fieldName: id (string) - the name of the field
++ position: 1 (number, required) - the position of the field
 
 
 
